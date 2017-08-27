@@ -1,36 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>URL Shortener Microservice</title>
+<html>
 
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    <style>
-        body { padding-top:50px; }
-    </style>
+<head>
+    <meta charset="utf-8">
+    <title>URL Shortener Microservice</title>
+    <style></style>
 </head>
+
 <body>
 
-    <div class="container">
-        <div class="jumbotron">
-            <h1>URL Shortener Microservice</h1>
-          <h2>
-            Usage
-          </h2>
-          <pre>https://url-shortener-js.glitch.me/</pre>
-          <p>
-  this page
-          </p>
-          <pre>https://url-shortener-js.glitch.me/new/http://www.google.com</pre>
-          <p>
-  creates a short link for http://www.google.com
-          </p>
-          <pre>https://url-shortener-js.glitch.me/[number]</pre>
-          <p>
-  redirects to the [number] URL alias
-          </p>
-        </div>
-    </div>
+    <h1 id="urlshortenermicroservice">URL Shortener Microservice</h1>
+
+    <p>For <a href="http://freecodecamp.com">freeCodeCamp</a> - <a href="https://www.freecodecamp.org/challenges/url-shortener-microservice">Back end > API Projects > URL Shortener Microservice</a></p>
+
+    <h2 id="userstories">User Stories</h2>
+
+    <ol>
+        <li>
+            <p>I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.</p>
+        </li>
+
+        <li>
+            <p>If I pass an invalid URL that doesn't follow the valid http://www.example.com format, the JSON response will
+                contain an error instead.</p>
+        </li>
+
+        <li>
+            <p>When I visit that shortened URL, it will redirect me to my original link.</p>
+        </li>
+    </ol>
+
+    <h2 id="usage">Usage</h2>
+
+    <pre><code>// Generate new short URL:
+    https://url-shortener-js.glitch.me/new/http://www.example.com
+    </code></pre>
+
+    <pre><code>// Accesses a previously generated short URL:
+    https://url-shortener-js.glitch.me/5178
+    </code></pre>
+
+    <h2 id="output">Output</h2>
+
+    <pre><code>{
+        "original_url": "http://www.example.com",
+        "short_url": "https://url-shortener-js.glitch.me/5178"
+    }
+    </code></pre>
+
+    <pre><code>{
+        "error": "Invalid URL."
+    }
+    </code></pre>
 
 </body>
+
 </html>
